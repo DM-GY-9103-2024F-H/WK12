@@ -7,3 +7,4 @@ _WK*.ipynb
 *.py.*
 *.pyc
 !WKI_utils.py
+data/image/lfw

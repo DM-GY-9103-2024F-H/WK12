@@ -1,3 +1,3 @@
 # Week I
 
-More Neural Networks
+CNNs and image Neural Networks
