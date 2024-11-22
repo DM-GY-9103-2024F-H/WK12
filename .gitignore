@@ -1,10 +1,9 @@
 .DS_S*
 __pycache__/
-HW*-solution.ipynb
-HW*.ipynb
 *_utils.py
 _WK*.ipynb
-*.py.*
 *.pyc
-!WKI_utils.py
+*.py.*
+*.pyc.*
 data/image/lfw
+!WK12_utils.py
