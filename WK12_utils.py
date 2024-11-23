@@ -17,8 +17,9 @@ class FaceDataset(Dataset):
     return img.reshape(-1)
 
   def __init__(self, imgs, labels, transform=None, cnn_loader=False):
-    self.imgs = imgs
-    self.labels = labels
+    self.device = "cuda" if torch.cuda.is_available() else "cpu"
+    self.imgs = imgs.to(self.device)
+    self.labels = labels.to(self.device)
     self.transform = transform
     self.cnn = cnn_loader
 
@@ -41,7 +42,7 @@ class FaceDataset(Dataset):
 
 class LFWUtils(LFWUtils_Linear):
   @staticmethod
-  def train_test_split(test_pct=0.5, random_state=101010, return_loader=True, cnn_loader=False, train_transform=None, test_transform=None):
+  def train_test_split(test_pct=0.5, random_state=101010, return_loader=False, cnn_loader=False, train_transform=None, test_transform=None):
     train, test = LFWUtils_Linear.train_test_split(test_pct=test_pct, random_state=random_state)
 
     if return_loader or cnn_loader:
