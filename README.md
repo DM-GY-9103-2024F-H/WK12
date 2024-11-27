@@ -1,3 +1,3 @@
 # Week 12
 
-Image Neural Networks and CNNs
+Image Neural Networks
