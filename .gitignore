@@ -6,4 +6,3 @@ _WK*.ipynb
 *.py.*
 *.pyc.*
 data/image/lfw
-!WK12_utils.py
